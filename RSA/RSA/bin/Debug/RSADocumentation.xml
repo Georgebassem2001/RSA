@@ -1,0 +1,207 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RSA</name>
+    </assembly>
+    <members>
+        <member name="M:RSA.BigInteger.break_into2(RSA.BigInteger,System.Int32)">
+            <summary>
+            TODO: Write an efficient algorithm that multiplies 2 BigIntegers (A and B)
+            </summary>
+            <param name="X">first Operand, Non-Negative BigInteger</param>
+            <param name="Y">second Operand, Non-Negative BigInteger</param>
+            <returns>BigInteger, The result of Multiplying A by B</returns>
+        </member>
+        <member name="M:RSA.BigInteger.DivMod(RSA.BigInteger,RSA.BigInteger)">
+            <summary>
+            TODO: Write an efficient algorithm that calculates div-mod
+            The function should calculates the quotient (A / B) and the remainder (A mod B)
+            </summary>
+            <param name="A">the dividend, non-negative BigInteger</param>
+            <param name="B">the divisor, Positive BigInteger</param>
+            <returns> 
+            A Tuple (pair of BigIntegers)
+            The first Item is the quotient (A / B)
+            The second Item is the remainder (A mod B)
+            </returns>
+        </member>
+        <member name="F:RSA.BigInteger.cons">
+            <summary>
+            TODO: Write an efficient algorithm that calculates Mod of Power
+            The function should calculates the result of the equation (B ^ P) mod M
+            </summary>
+            <param name="B">the base, non-negative BigInteger</param>
+            <param name="P">the exponent, non-negative BigInteger</param>
+            <param name="M">the modulus value, positive BigInteger</param>
+            <returns>BigInteger, The result of (B ^ P) mod M</returns>
+        </member>
+        <member name="M:RSA.BigInteger.#ctor">
+            <summary>
+            Default Constructor
+            Creates A BigInteger that has the value of zero
+            </summary>
+        </member>
+        <member name="M:RSA.BigInteger.#ctor(System.String)">
+            <summary>
+            Creates a BigInteger from a numeric string
+            </summary>
+            <param name="number">Numeric string</param>
+        </member>
+        <member name="M:RSA.BigInteger.#ctor(System.String,System.Boolean)">
+            <summary>
+            Creates a BigInteger from a numeric String and a Sign
+            </summary>
+            <param name="number">Numeric string</param>
+            <param name="sign">Boolean variable for the sign
+            (sign = true for negatives, sign = false for positives)</param>
+        </member>
+        <member name="M:RSA.BigInteger.#ctor(System.Byte[])">
+            <summary>
+            Creates a BigInteger form a byte array
+            Each element in the array represents a digit in the number
+            </summary>
+            <param name="arr">byte array. Each digit represents a digit of the big number</param>
+        </member>
+        <member name="M:RSA.BigInteger.#ctor(System.Byte[],System.Boolean)">
+            <summary>
+            Creates a BigInteger from a byte array and a sign
+            Each element in the array represents a digit in the number
+            </summary>
+            <param name="arr">byte array. Each digit represents a digit of the big number</param>
+            <param name="sign">Boolean variable for the sign
+            (sign = true for negatives, sign = false for positives)</param>
+        </member>
+        <member name="M:RSA.BigInteger.#ctor(System.Int64)">
+            <summary>
+            Creates a BigInteger from a variable with long data type
+            </summary>
+            <param name="number">the number whose value will be in the big number</param>
+        </member>
+        <member name="M:RSA.BigInteger.Add(RSA.BigInteger,RSA.BigInteger)">
+            <summary>
+            Add two positive BigIntegers and returns the result
+            </summary>
+            <param name="A">Big Integer (should be positive)</param>
+            <param name="B">Big Integer (should be positive)</param>
+            <returns>Big Integer (the result of adding A and B)</returns>
+        </member>
+        <member name="M:RSA.BigInteger.Subtract(RSA.BigInteger,RSA.BigInteger)">
+            <summary>
+            Subtracts B from A, A and B are positive BigIntegers
+            </summary>
+            <param name="A">First Operand</param>
+            <param name="B">Second Operand</param>
+            <returns>Subtraction Result as a BigInteger (It may be negative)</returns>
+        </member>
+        <member name="F:RSA.BigInteger.zero">
+            <summary>
+            a big integer with value equal to zero
+            to be used as a helper object during the implementation (e.g. to compare bigintegers with it)
+            </summary>
+        </member>
+        <member name="F:RSA.BigInteger.one">
+            <summary>
+            a big integer with value equal to one
+            to be used as a helper object during the implementation (e.g. to add it to another BigInteger)
+            </summary>
+        </member>
+        <member name="F:RSA.BigInteger.two">
+            <summary>
+            a big integer with value equal to two
+            to be used as a helper object during the implementation (e.g. to multiply it with another bigInteger)
+            </summary>
+        </member>
+        <member name="M:RSA.BigInteger.Is_Even(RSA.BigInteger)">
+            <summary>
+            Calculates the parity of the big integer (is it odd or even?)
+            </summary>
+            <param name="bigInteger">the big integer</param>
+            <returns>
+            true if the integer is even.
+            false if the integer is odd.
+            </returns>
+        </member>
+        <member name="M:RSA.BigInteger.Is_Zero(RSA.BigInteger)">
+            <summary>
+            Check if the big integer equals zero or not
+            </summary>
+            <param name="bigInteger">a big integer</param>
+            <returns>
+            true if the big integer is zero
+            false otherwise
+            </returns>
+        </member>
+        <member name="M:RSA.BigInteger.PadWithZeros(RSA.BigInteger,System.Int32)">
+            <summary>
+            pad the big integer with zeros (to the right)
+            for example: if A = 29398, numberOfZeros = 5
+            the funciton should return : 2939800000
+            </summary>
+            <param name="A">big integer</param>
+            <param name="numberOfZeros">the number of zeros to pad</param>
+            <returns>the big integer after padding it with zeros</returns>
+        </member>
+        <member name="M:RSA.BigInteger.AddLeadingZeros(RSA.BigInteger,System.Int32)">
+            <summary>
+            add trailing zeros to the big integer (to the left)
+            for example: if A = 29398, numberOfZeros = 5
+            the funciton should return a big integer with the value: 0000029398
+            </summary>
+            <param name="A">big integer</param>
+            <param name="numberOfZeros">the number of zeros to add</param>
+            <returns>the big integer after adding trailing zeros</returns>
+        </member>
+        <member name="M:RSA.BigInteger.RemoveLeadingZeros(RSA.BigInteger)">
+            <summary>
+            remove trailing zeros from the big integer
+            for example: if A = 0000293
+            the funciton should return 293
+            </summary>
+            <param name="A">a big integer, to remove the trailing zeros from</param>
+            <returns>the number after removing trailing zeros</returns>
+        </member>
+        <member name="M:RSA.BigInteger.CompareTo(RSA.BigInteger)">
+            <summary>
+            Compare the instance of BigInteger with other Biginteger
+            </summary>
+            <param name="other">another BigInteger, to compare the current BigInteger with</param>
+            <returns>
+            -1 if this instance is less than other
+            0 if this instance is equal to other
+            1 if this instance is greater than other
+            </returns>
+        </member>
+        <member name="M:RSA.BigInteger.Equals(RSA.BigInteger)">
+            <summary>
+            Check if the instance of BigInteger and other BigInteger are equal or not
+            </summary>
+            <param name="other">another BigInteger, to check the equality of it with current BigInteger</param>
+            <returns>
+            true if this instanc is equal to other
+            false if they are not equal
+            </returns>
+        </member>
+        <member name="F:RSA.RSA.size">
+            <summary>
+            TODO: *BONUS* Adjust RSA to work with strings rather than integers. Note that string size is unknown
+            This function takes a string to encrypt(along with required parameters for RSA encryption algorithm)
+            The function should return the encrypted message as string
+            </summary>
+            <param name="M">a string, the text message to encrypt</param>
+            <param name="E">a big integer, the public key</param>
+            <param name="N">a big integer, the modulus</param>
+            <returns>a string, the ecrypted message</returns>
+        </member>
+        <member name="M:RSA.RSA.decodestring(System.String)">
+            <summary>
+            TODO: *BONUS* Adjust RSA to work with strings rather than integers. Note that string size is unknown
+            This function takes a string to decrypt (along with required parameters for RSA encryption algorithm)
+            The function should return the decrypted message as string
+            </summary>
+            <param name="EofM">a string, the encrypted message to decrypt</param>
+            <param name="D">a big integer, the private key</param>
+            <param name="N">a big integer, the modulus</param>
+            <returns>a string, the decrypted message</returns>
+        </member>
+    </members>
+</doc>
